@@ -1,0 +1,47 @@
+--> CloudCycle Test Suites Parameters
+	1. Environment
+    2. SrcURL
+    3. SrcUserName
+    4. SrcUserPassword
+    5. DestURL
+    6. DestUserName
+    7. DestUserPassword
+    8. Browser
+    9. suiteXmlFile
+   10. cloudCycleName
+    
+--> InfraIndependent Test Suites Parameters
+	1. Environment
+    2. SrcURL
+    3. SrcUserName
+    4. SrcUserPassword
+    5. DestURL
+    6. DestUserName
+    7. DestUserPassword
+    8. Browser
+    9. suiteXmlFile
+
+--> Environment Based Test Suites Parameters
+    1. Environment
+    2. SrcURL
+    3. SrcUserName
+    4. SrcUserPassword
+    5. DestURL
+    6. DestUserName
+    7. DestUserPassword
+    8. Browser
+    9. suiteXmlFile
+    
+--> All GRID URLs
+
+1)  Developement : http://dcwmiobvt01.eur.ad.sag:4444	
+2)  Integration : http://dcwmiobvt02.eur.ad.sag:4444			
+3)  Staging	: http://dcwmiobvt03.eur.ad.sag:4444	
+4)  Spro : http://dcwmiobvt04.eur.ad.sag:4444	
+5)  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX : http://dcwmiodev01.eur.ad.sag:4444
+6)	PreProd : http://dcwmiodev03.eur.ad.sag:4444
+7)  PreDev : http://dcwmiodev04.eur.ad.sag:4444	
+8)	Production : http://dcwmiodev05.eur.ad.sag:4444		
+9)	INFRA-INDEPENDENt : http://vmntx-nxwmic02:4444	
+10)	CLOUD-CYCLE	: http://vmnx-wmic04:4444	
+11)	LOCAL-TEST : http://localhost:4444

@@ -1,0 +1,26 @@
+AWS and Azure Tenant base login URLs					
+          
+1) PreDev : https://TENANT_NAME.stag-int-aws-us.webmethods.io
+
+2) Developement : https://TENANT_NAME.dev-int-aws-us.webmethods.io
+
+3) Integration : https://TENANT_NAME.int-aw-us1.webmethods-int.io
+
+4) Stag : https://TENANT_NAME.stag-int-aws-us.webmethods.io
+	    : https://TENANT_NAME.int-az-us.webmethods-stage.io
+
+5) Spro : https://TENANT_NAME.spro-int-aws-us.webmethods.io
+		: https://TENANT_NAME.int-az-us.webmethods-spro.io
+
+6) PreProd : https://TENANT_NAME.preprod-int-aws-us.webmethods.io
+		   : https://TENANT_NAME.int-az-us.webmethods-preprod.io
+		   
+7) Production : https://TENANT_NAME.int-aws-us.webmethods.io       
+			  : https://TENANT_NAME.int-az-us.webmethods.io  
+			  : https://TENANT_NAME.int-az-us1.webmethods.io
+			  : https://TENANT_NAME.int-az-us2.webmethods.io
+			  : https://TENANT_NAME.int-aws-de.webmethods.io 
+			  : https://TENANT_NAME.int-az-eu.webmethods.io        
+              : https://TENANT_NAME.int-aws-de.webmethods.io     										 
+			  : https://TENANT_NAME.int-aw-au.webmethods.io          
+			  : https://TENANT_NAME.int-az-au.webmethods.io

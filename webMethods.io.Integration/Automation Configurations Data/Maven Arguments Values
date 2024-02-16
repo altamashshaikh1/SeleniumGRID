@@ -1,0 +1,22 @@
+All Maven arguments supported values
+
+1) Environment : PreDev, Developement, Integration, Stag, Spro, PreProd, Production
+
+2) SrcURL : SOURCE TENANT URL
+
+3) SrcUserName : SOURCE TENANT USERNAME
+
+4) SrcUserPassword : SOURCE TENANT USERPASSWORD
+
+5) DestURL : SOURCE TENANT URL
+
+6) DestUserName : SOURCE TENANT USERNAME
+
+7) DestUserPassword : SOURCE TENANT USERPASSWORD
+
+8) Browser : chrome, firefox, edge, opera, safari, internetexplorer, chromeheadless, firefoxheadless, edgeheadless, operaheadless    
+				 	 
+9) suiteXmlFile : LocalTest.xml, PreDev.xml, Developement.xml, Integration.xml, Stag.xml, Spro.xml, PreProd.xml, Production.xml, TestSuiteCloudCycle.xml, TestSuiteInfraUpdate.xml
+  				   
+10) cloudCycleName : Cloud cycle name raised by team {PRODUCTS}-{PLATFORMS}-{CYCLENAME}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------				   

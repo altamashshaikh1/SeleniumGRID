@@ -1,0 +1,74 @@
+*******************************************************************************************************************************************************************************************************************************************************
+Syntax : MAVEN COMMAND line
+																						    
+mvn clean test -P<MAVEN_PROFILE_ID> -Darg1= ........... -Dgroups=
+			   
+*******************************************************************************************************************************************************************************************************************************************************
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. CLOUDCYCLE TEST SUITE MAVEN COMMAND
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ 	mvn clean test -PTRIGGER_CLOUDCYCLE_TESTS -DEnvironment= 
+ 	                                          -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+ 	                                          -DDestURL = -DDestUserName= -DDestUserPassword= 
+ 	                                          -DCloudCycleName= 
+ 	                                          -DsuiteXmlFile= 
+ 	                                          -Dgroups=
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2. INFRA INDEPENDENT TEST SUITE MAVEN COMMAND
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+   	mvn clean test -PTRIGGER_INFRA_INDEPENDENT_TESTS -DEnvironment=  
+   	                                                 -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+   	                                                 -DDestURL= -DDestUserName= -DDestUserPassword= 
+   	                                                 -DsuiteXmlFile=
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 3. ENVIRONMENT BASED TEST SUITE MAVEN COMMAND (AWS & Azure)
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	mvn clean test -PTRIGGER_PRE_DEV_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=
+
+    mvn clean test -PTRIGGER_DEVELOPEMENT_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=
+
+
+    mvn clean test -PTRIGGER_INTEGRATION_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=
+	                                       
+	                                       
+	mvn clean test -PTRIGGER_STAGING_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=
+	                                       
+    mvn clean test -PTRIGGER_SPRO_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=
+	                                       
+	mvn clean test -PTRIGGER_PREPROD_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=
+	                                       
+	mvn clean test -PTRIGGER_PRODUCTION_TESTS -DEnvironment=  
+	                                       -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+	                                       -DDestURL= -DDestUserName= -DDestUserPassword= 
+	                                       -DsuiteXmlFile=          
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 4. LOCAL TEST SUITE MAVEN COMMAND
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	mvn clean test -PTRIGGER_LOCAL_TESTS -DEnvironment=  
+										 -DSrcURL= -DSrcUserName= -DSrcUserPassword= 
+										 -DDestURL= -DDestUserName= -DDestUserPassword= 
+										 -DsuiteXmlFile=
+
+*******************************************************************************************************************************************************************************************************************************************************

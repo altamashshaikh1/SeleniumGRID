@@ -1,0 +1,51 @@
+DOCKER HUB & NODES COMMANDS 
+
+1) Setup Selenium Grid 4 Hub on docker : Linux VM 1
+   
+   docker run -d -p 4442-4444:4442-4444 
+   				 --name selenium-hub 
+   				 selenium/hub:4.10.0
+			  
+2) Add Chrome nodes from same VM/machine
+   
+   docker run -d -p 5555:5555 -p 7900:7900 
+                 --shm-size="4g" 
+                 --link selenium-hub 
+                 --name ChromeNode1 
+                 -e SCREEN_WIDTH=1920 
+                 -e SCREEN_HEIGHT=1080 
+                 -e SE_NODE_GRID_URL=http://HUB_Linux VM 1_HOST_IP:4444 
+                 -e SE_EVENT_BUS_HOST=selenium-hub 
+                 -e SE_EVENT_BUS_PUBLISH_PORT=4442 
+                 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 
+                 -e SE_NODE_MAX_INSTANCES=1 
+                 -e SE_NODE_MAX_SESSIONS=1 
+                 selenium/node-chrome:112.0	  
+			  
+   docker run -d -p 5551:5555 -p 7901:7900 
+                 --shm-size="4g" 
+                 --link selenium-hub 
+                 --name ChromeNode2 
+                 -e SCREEN_WIDTH=1920 
+                 -e SCREEN_HEIGHT=1080 
+                 -e SE_NODE_GRID_URL=http://HUB_Linux VM 1_HOST_IP:4444  
+                 -e SE_EVENT_BUS_HOST=selenium-hub 
+                 -e SE_EVENT_BUS_PUBLISH_PORT=4442 
+                 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 
+                 -e SE_NODE_MAX_INSTANCES=1 
+                 -e SE_NODE_MAX_SESSIONS=1 
+                 selenium/node-chrome:112.0	
+		
+   docker run -d -p 5552:5555 -p 7902:7900 
+   					          --shm-size="4g" 
+   					          --link selenium-hub 
+   					          --name ChromeNode3 
+   					          -e SCREEN_WIDTH=1920 
+   					          -e SCREEN_HEIGHT=1080 
+   					          -e SE_NODE_GRID_URL=http://HUB_Linux VM 1_HOST_IP:4444  
+   					          -e SE_EVENT_BUS_HOST=selenium-hub 
+   					          -e SE_EVENT_BUS_PUBLISH_PORT=4442 
+   					          -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 
+   					          -e SE_NODE_MAX_INSTANCES=1 
+   					          -e SE_NODE_MAX_SESSIONS=1 
+   					          selenium/node-chrome:112.0	

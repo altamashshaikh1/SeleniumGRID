@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="UI Automation Test Suite Pre-Dev Environment" parallel="tests" thread-count="6">
+
+	<listeners>
+		<listener class-name="com.webMethods.io.Integration.Listeners.ListenersTestNG" />
+		<listener class-name="com.webMethods.io.Integration.Listeners.RetryListener"/>
+	</listeners>
+
+	<test name="BEFORE SUITE AND AFTER SUITE">
+		<classes>
+			<class name="com.webMethods.io.Integration.SeleniumUtilities.BaseTest" />
+		</classes>
+	</test>
+
+	<test name="Project CRUD operation test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectTests.BVT.ProjectCRUD" />
+		</classes>
+	</test>
+
+	<test name="Notifications test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.Notifications.BVT.Notifications" />
+		</classes>
+	</test> 
+
+	<test name="Connectors page test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConnectorsPage.BVT.ConnectorsPage" />
+		</classes>
+	</test>
+
+	<test name="Configuration test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.Configuration.BVT.Configuration" />
+		</classes>
+	</test> 
+	
+	<test name="Recipes test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.Recipes.BVT.Recipes" />
+		</classes>
+	</test>
+
+	<test name="Profile management test cases - Profile data">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProfileData.BVT.ProfileData" />
+		</classes>
+	</test>
+
+	<test name="Profile management test cases - User roles">
+		<classes>
+			<class name="com.webMethods.io.Integration.UserManagement.BVT.UserManagement" />
+		</classes>
+	</test>
+
+	<test name="Profile management test cases - White label">
+		<classes>
+			<class name="com.webMethods.io.Integration.WhiteLabel.BVT.WhiteLabel" />
+		</classes>
+	</test>
+
+	 <test name="Help menu">
+		<classes>
+			<class name="com.webMethods.io.Integration.HelpMenu.BVT.HelpMenu" />
+		</classes>
+	</test>
+
+	<test name="Monitor test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MonitorDashboard.BVT.MonitorDashboard" />
+		</classes>
+	</test>
+
+	<test name="Gain sight popup test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.GainsightPopup.BVT.GainsightPopup" />
+		</classes>
+	</test> 
+	
+</suite> 

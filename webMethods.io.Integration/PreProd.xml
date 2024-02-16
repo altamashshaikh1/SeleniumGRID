@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="UI Automation Test Suite PreProduction Environment" parallel="tests" thread-count="6">
+
+	<listeners>
+		<listener class-name="com.webMethods.io.Integration.Listeners.ListenersTestNG" />
+		<listener class-name="com.webMethods.io.Integration.Listeners.RetryListener"/>
+	</listeners>
+
+	<test name="BEFORE SUITE AND AFTER SUITE">
+		<classes>
+			<class name="com.webMethods.io.Integration.SeleniumUtilities.BaseTest" />
+		</classes>
+	</test>
+
+	<test name="Project CRUD operation test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectTests.ProjectCRUD"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow CRUD operation test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.WorkflowsTests.WorkflowCRUD"/>
+		</classes>
+	</test>
+
+	<test name="Connectors operations test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConnConfigurationTests.ConnectorsConfigurations"/>
+		</classes>
+	</test>
+
+	<test name="Asset dependency (Clone workflow) test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.CloneWFDependentTests.CloneWorkflowDependent"/>
+		</classes>
+	</test>
+	
+	<test name="Asset dependency (Import workflow) test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ImportWFDependentTests.ImportWorkflowDependent"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow execution (With IC assets)">
+		<classes>
+			<class name="com.webMethods.io.Integration.WorkflowICExecutionsTests.WorkflowICAssetsExecutions"/>
+		</classes>
+	</test>
+
+	<test name="Notifications test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.NotificationsTests.Notifications"/>
+		</classes>
+	</test>
+	
+	<test name="Trigger test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.TriggersTests.Triggers"/>
+		</classes>
+	</test>
+	
+	<test name="Connectors page test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConnectorsPageTests.ConnectorsPage"/>
+		</classes>
+	</test>
+	
+	<test name="Configuration test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConfigurationsTests.Configurations"/>
+		</classes>
+	</test>
+
+	<test name="Stag management - Project publish deploy">
+		<classes>
+			<class name="com.webMethods.io.Integration.PublishDeployTests.ProjectPublishDeploy"/>
+		</classes>
+	</test>
+	
+	<test name="Webhook test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.WebhooksTests.Webhooks"/>
+		</classes>
+	</test>
+	
+	<test name="Recipes test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.RecipesTests.Recipes"/>
+		</classes>
+	</test>
+
+	<test name="Profile management test cases - Profile data">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProfileDataTests.ProfileData"/>
+		</classes>
+	</test>
+	
+	<test name="Profile management test cases - User roles">
+		<classes>
+			<class name="com.webMethods.io.Integration.UserManagementTests.UserManagement"/>
+		</classes>
+	</test>
+	
+	<test name="Profile management test cases - White label">
+		<classes>
+			<class name="com.webMethods.io.Integration.WhiteLabelTests.WhiteLabel"/>
+		</classes>
+	</test>
+
+	<test name="Help menu">
+		<classes>
+			<class name="com.webMethods.io.Integration.HelpMenuTests.HelpMenu"/>
+		</classes>
+	</test>
+	
+	<test name="Monitor test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MonitorDashboardTests.MonitorDashboard"/>
+		</classes>
+	</test>
+	
+	<test name="Partner certificate test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.PartnerCertsTests.PartnerCertificate"/>
+		</classes>
+	</test>
+
+	<test name="Gain sight popup test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.GainSightPopUpTests.GainsightPopup"/>
+		</classes>
+	</test>
+	
+	<test name="Business Objects Fields Select All Fields Option test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.SelectAllTests.BusinessObjectsFieldsSelectAllFields"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow messaging publish test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MessagingPublishDeployTests.MessagingServicePublishDeploy"/>
+		</classes>
+	</test>
+
+	<!-- HARSHAD'S 3.1 TEST CASES -->
+	<test name="Verify Support link for Paid customer">
+		<classes>
+			<class name="com.webMethods.io.Integration.SupportLinkPaidTests.SupportLinkPaidCustomer"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Support link for Trial customer">
+		<classes>
+			<class name="com.webMethods.io.Integration.SupportLinkTrialTests.SupportLinkTrialCustomer"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Functional Search Area option">
+		<classes>
+			<class name="com.webMethods.io.Integration.FunctionalAreaSearchTests.FunctionalAreaSearchOption"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Dynamic account enable disable option">
+		<classes>
+			<class name="com.webMethods.io.Integration.DynamicAccEnableDisableTests.DynamicAccountEnableDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Dynamic account select all fields option">
+		<classes>
+			<class name="com.webMethods.io.Integration.DynamicAccFieldsTests.DynamicAccountSelectAllFieldsOption"/>
+		</classes>
+	</test>
+
+	<!-- HARSHAD'S 10.11 TEST CASES -->
+	<test name="Workflow execution logs with enable and disable option">
+		<classes>
+			<class name="com.webMethods.io.Integration.EnableDisabledWorkflowTests.WorkflowLogEnableDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow execution logs with subscriber workflow">
+		<classes>
+			<class name="com.webMethods.io.Integration.SubscriberLogTests.SubscriberWorkflowExecutionLogDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow execution logs with workflow enable and publish/deploy">
+		<classes>
+			<class name="com.webMethods.io.Integration.PublishDeployExecutionLogsTests.PublishDeployWorkflowExecutionLogEnableDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="CustomDomain Stag management - Project publish deploy">
+		<classes>
+			<class name="com.webMethods.io.Integration.CustomDomainPublishDeployTests.CustomPublishDeploy"/>
+		</classes>
+	</test>
+
+	<!-- Harshad 10.16 Release features -->
+
+	<test name="Project Parameters : Publish and Deploy Projects">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectParamsPublishDeployTests.ProjectParamsPublishDeploy"/>
+		</classes>
+	</test>
+	
+	<test name="Custom Role Workflow Delete test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.DeleteWorkflowWithRoleTests.DeleteWorkflowWithCustomRole"/>
+		</classes>
+	</test>
+	
+	<test name="Transaction Count test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.TransactionsCountTests.TransactionCount"/>
+		</classes>
+	</test>
+
+</suite>

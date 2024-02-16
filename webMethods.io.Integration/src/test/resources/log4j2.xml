@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration
+	xmlns="http://logging.apache.org/log4j/2.0/config">
+
+	<Properties>
+		<Property name="basePath">../webMethods.io.Integration/Test Automation Results/Application Test Execution Logs</Property>
+	</Properties>
+
+	<Appenders>
+		<File name="FILE" fileName="${basePath}/Logfile.log" append="true">
+			<PatternLayout pattern="[%-5p] : | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="org.testng" level="INFO" additivity="false">
+			<AppenderRef ref="FILE" />
+		</Logger>
+		
+		<Logger name="com.example" level="DEBUG" additivity="false">
+			<AppenderRef ref="FILE" />
+		</Logger>
+		
+		<Root level="INFO">
+			<AppenderRef ref="FILE" />
+		</Root>
+	</Loggers>
+
+</Configuration>

@@ -1,0 +1,46 @@
+DOCKER NODES COMMANDS 
+
+1) Add Chrome nodes from different VM/machine with above created HUB : Linux VM 2
+   docker run -d -p 5555:5555 -p 7900:7900 
+   				 --shm-size="4g" 
+                 --name ChromeNode4 
+   	             -e SCREEN_WIDTH=1920 
+   	             -e SCREEN_HEIGHT=1080 
+   	             -e SE_NODE_GRID_URL=http://CHROME_NODE_Linux VM 2_HOST_IP:4444 
+   	             -e SE_EVENT_BUS_HOST=dcwmiobvt01.eur.ad.sag 
+   	             -e SE_NODE_HOST=dcwmiobvt02.eur.ad.sag 
+   	             -e SE_EVENT_BUS_PUBLISH_PORT=4442 
+   	             -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 
+   	             -e SE_NODE_MAX_INSTANCES=1 
+   	             -e SE_NODE_MAX_SESSIONS=1 
+   	             selenium/node-chrome:112.0
+
+2) Add Chrome nodes from different VM/Machien with above created HUB : Linux VM 3
+   docker run -d -p 5555:5555 -p 7900:7900 
+   			     --shm-size="4g" 
+   			     --name ChromeNode5 
+   			     -e SCREEN_WIDTH=1920 
+   			     -e SCREEN_HEIGHT=1080 
+   			     -e SE_NODE_GRID_URL=http://CHROME_NODE_Linux VM 3_HOST_IP:4444 
+   			     -e SE_EVENT_BUS_HOST=dcwmiobvt01.eur.ad.sag 
+   			     -e SE_NODE_HOST=dcwmiobvt03.eur.ad.sag 
+   			     -e SE_EVENT_BUS_PUBLISH_PORT=4442 
+   			     -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 
+   			     -e SE_NODE_MAX_INSTANCES=1 
+   			     -e SE_NODE_MAX_SESSIONS=1 
+   			     selenium/node-chrome:112.0 
+
+3) Add Chrome nodes from different VM/Machien with above created HUB : Linux VM 4
+   docker run -d -p 5555:5555 -p 7900:7900 
+   				 --shm-size="4g" 
+   				 --name ChromeNode6 
+   				 -e SCREEN_WIDTH=1920 
+   				 -e SCREEN_HEIGHT=1080 
+   				 -e SE_NODE_GRID_URL=http://CHROME_NODE_Linux VM 4_HOST_IP:4444  
+   				 -e SE_EVENT_BUS_HOST=dcwmiobvt01.eur.ad.sag 
+   				 -e SE_NODE_HOST=dcwmiobvt04.eur.ad.sag 
+   				 -e SE_EVENT_BUS_PUBLISH_PORT=4442 
+   				 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 
+   				 -e SE_NODE_MAX_INSTANCES=1 
+   				 -e SE_NODE_MAX_SESSIONS=1 
+   				 selenium/node-chrome:112.0

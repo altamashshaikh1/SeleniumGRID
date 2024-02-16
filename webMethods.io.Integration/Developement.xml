@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="UI Automation Test Suite Developement Environment" parallel="tests" thread-count="6">
+
+	<listeners>
+		<listener class-name="com.webMethods.io.Integration.Listeners.ListenersTestNG"/>
+		<listener class-name="com.webMethods.io.Integration.Listeners.RetryListener"/>
+	</listeners>
+	
+	<test name="BEFORE SUITE AND AFTER SUITE">
+		<classes>
+			<class name="com.webMethods.io.Integration.SeleniumUtilities.BaseTest"/>
+		</classes>
+	</test>
+	
+	<test name="Project CRUD operation test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectTests.ProjectCRUD"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow CRUD operation test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.WorkflowsTests.WorkflowCRUD"/>
+		</classes>
+	</test>
+	
+	<test name="Connectors operations test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConnConfigurationTests.ConnectorsConfigurations"/>
+		</classes>
+	</test>
+	
+	<test name="Asset dependency (Clone workflow) test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.CloneWFDependentTests.CloneWorkflowDependent"/>
+		</classes>
+	</test>
+	
+	<test name="Asset dependency (Import workflow) test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ImportWFDependentTests.ImportWorkflowDependent"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow execution (With IC assets)">
+		<classes>
+			<class name="com.webMethods.io.Integration.WorkflowICExecutionsTests.WorkflowICAssetsExecutions"/>
+		</classes>
+	</test>
+
+	<test name="Notifications test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.NotificationsTests.Notifications"/>
+		</classes>
+	</test>
+	
+	<test name="Trigger test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.TriggersTests.Triggers"/>
+		</classes>
+	</test>
+	
+	<test name="Connectors page test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConnectorsPageTests.ConnectorsPage"/>
+		</classes>
+	</test>
+	
+	<test name="Configuration test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ConfigurationsTests.Configurations"/>
+		</classes>
+	</test>
+	
+	<test name="Stag management - Project publish deploy">
+		<classes>
+			<class name="com.webMethods.io.Integration.PublishDeployTests.ProjectPublishDeploy"/>
+		</classes>
+	</test>
+	
+	<test name="Webhook test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.WebhooksTests.Webhooks"/>
+		</classes>
+	</test>
+	
+	<test name="Recipes test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.RecipesTests.Recipes"/>
+		</classes>
+	</test>
+	
+	<test name="Profile management test cases - Profile data">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProfileDataTests.ProfileData"/>
+		</classes>
+	</test>
+	
+	<test name="Profile management test cases - User roles">
+		<classes>
+			<class name="com.webMethods.io.Integration.UserManagementTests.UserManagement"/>
+		</classes>
+	</test>
+	
+	<test name="Profile management test cases - White label">
+		<classes>
+			<class name="com.webMethods.io.Integration.WhiteLabelTests.WhiteLabel"/>
+		</classes>
+	</test>
+	
+	<test name="Help menu">
+		<classes>
+			<class name="com.webMethods.io.Integration.HelpMenuTests.HelpMenu"/>
+		</classes>
+	</test>
+	
+	<test name="Monitor test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MonitorDashboardTests.MonitorDashboard"/>
+		</classes>
+	</test>
+	
+	<test name="Partner certificate test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.PartnerCertsTests.PartnerCertificate"/>
+		</classes>
+	</test>
+	
+	<test name="Gain sight popup test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.GainSightPopUpTests.GainsightPopup"/>
+		</classes>
+	</test>
+	
+	<test name="Business Objects Fields Select All Fields Option test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.SelectAllTests.BusinessObjectsFieldsSelectAllFields"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow messaging publish test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MessagingPublishDeployTests.MessagingServicePublishDeploy"/>
+		</classes>
+	</test>
+	
+	
+	<!-- HARSHAD'S 3.1 TEST CASES -->
+	<test name="Verify Support link for Paid customer">
+		<classes>
+			<class name="com.webMethods.io.Integration.SupportLinkPaidTests.SupportLinkPaidCustomer"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Support link for Trial customer">
+		<classes>
+			<class name="com.webMethods.io.Integration.SupportLinkTrialTests.SupportLinkTrialCustomer"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Functional Search Area option">
+		<classes>
+			<class name="com.webMethods.io.Integration.FunctionalAreaSearchTests.FunctionalAreaSearchOption"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Dynamic account enable disable option">
+		<classes>
+			<class name="com.webMethods.io.Integration.DynamicAccEnableDisableTests.DynamicAccountEnableDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="Verify Dynamic account select all fields option">
+		<classes>
+			<class name="com.webMethods.io.Integration.DynamicAccFieldsTests.DynamicAccountSelectAllFieldsOption"/>
+		</classes>
+	</test>
+	<!-- HARSHAD'S 3.1 TEST CASES -->
+	
+	
+	<!-- HARSHAD'S 10.11 TEST CASES -->
+	<test name="Workflow execution logs with enable and disable option">
+		<classes>
+			<class name="com.webMethods.io.Integration.EnableDisabledWorkflowTests.WorkflowLogEnableDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow execution logs with subscriber workflow">
+		<classes>
+			<class name="com.webMethods.io.Integration.SubscriberLogTests.SubscriberWorkflowExecutionLogDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="Workflow execution logs with workflow enable and publish/deploy">
+		<classes>
+			<class name="com.webMethods.io.Integration.PublishDeployExecutionLogsTests.PublishDeployWorkflowExecutionLogEnableDisableOption"/>
+		</classes>
+	</test>
+	
+	<test name="CustomDomain Stag management - Project publish deploy">
+		<classes>
+			<class name="com.webMethods.io.Integration.CustomDomainPublishDeployTests.CustomPublishDeploy"/>
+		</classes>
+	</test>
+	<!-- HARSHAD'S 10.11 TEST CASES -->
+	
+	
+	<!--ALTAMASH BACKLOG TEST CASES -->
+	<test name="WhiteLabel backlog test case">		
+		<classes>
+			<class name="com.webMethods.io.Integration.WhiteLabelBackLogTests.WhiteLabelBackLogTests"/>
+		</classes>
+	</test>
+	
+	<test name="WorkflowsEnableDisable backlog test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.EnableDisableWorkflowsTests.WorkflowsEnableDisableBackLogTests"/>
+		</classes>
+	</test>
+	
+	<test name="WorkflowEditorKeyboardShorcuts backlog test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.KeyboardShortcutsBackLogTests.WorkflowEditorKeyboardShorcutsBacklogTests"/>
+		</classes>
+	</test>
+	
+	<test name="VisualIndication backlog test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.VisualIndicationBackLogTests.VisualIndicationBacklogTests"/>
+		</classes>
+	</test>
+	
+	<test name="RolesAndPermission backlog test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.RolesBackLogTests.RolesAndPermissionBacklogTests"/>
+		</classes>
+	</test>
+	
+	<test name="Custom NodeJS CLI Connector Project Publish Test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.CustomNodePublishDeployTests.PublishDeployProject"/>
+		</classes>
+	</test>
+	
+	<test name="Custom NodeJS CLI Connector Export Workflow Test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ExportWorkflowTests.ExportWorkflow"/>
+		</classes>
+	</test>
+	
+	<test name="Custom NodeJS CLI Connector Import Workflow Test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ImportWFTests.ImportWorkflow"/>
+		</classes>
+	</test>
+	<!--ALTAMASH BACKLOG TEST CASES -->
+	
+	
+	<!--VARSHITHA TEST CASES  -->
+	<test name="Custom Action configuration test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.CustomActionTests.CustomAction"/>
+		</classes>
+	</test>
+	
+	<test name="Asset Dependency Validation test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.AssetsDependenciesTests.AssetDependency"/>
+		</classes>
+	</test>
+	
+	<test name="Run Trusted Connectors test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.RunConnectorsTests.Runconnectors"/>
+		</classes>
+	</test>
+	
+	<test name="Switch Configuration test Cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.SwitchTests.SwitchCase"/>
+		</classes>
+	</test>
+	
+	<test name="Predefined Connectors testcases">
+		<classes>
+			<class name="com.webMethods.io.Integration.PreDefinedConnTests.PredefinedConnectors"/>
+		</classes>
+	</test>
+	
+	<test name="Trigger Delete Workflow Delete test Cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.WorkflowCreateTriggerTests.WorkflowCreateTriggerCreate"/>
+		</classes>
+	</test>
+	
+	<test name="Monitor Improvements test Cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MonitorPageTests.Monitorpage"/>
+		</classes>
+	</test>
+	
+	<test name="Max limit Test cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.MaxLimitTests.MaxLimitTest"/>
+		</classes>
+	</test>
+	
+	<test name="Metering Insights Test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.MeteringInsightsTests.MeteringInsight"/>
+		</classes>
+	</test>
+	
+	<test name="Promote Messaging service test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.MessagingServiceTests.MessagingService"/>
+		</classes>
+	</test>
+	
+	<test name="Private Webhook test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.PrivateWebhookTests.PrivateWebhook"/>
+		</classes>
+	</test>
+	
+	<test name="Project Variables Test Cases">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectVariablesTests.ProjectVariables"/>
+		</classes>
+	</test>
+	
+	<!--  <test name="WebMethods AI Test Cases">
+		<classes>
+			<class name="com.wmio.Integration.WebmethodsAITestCases.AIappswitch" />
+		</classes>
+	</test> -->
+	
+	<test name="Project Parameter Publish/deplpy/clone test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ParamatersClonePublisDeployTests.ProjectParameterClonePublishDeploy"/>
+		</classes>
+	</test>
+	<!--VARSHITHA TEST CASES  -->
+	
+	
+	<!--ALTAMASH SHAIKH MESSAGING BACK LOG TEST CASES  -->
+	<test name="Messaging BackLog test case - Design Time">
+		<classes>
+			<class name="com.webMethods.io.Integration.DesignTimeTests.DesignTimeTests"/>
+		</classes>
+	</test>
+	
+	<test name="Messaging BackLog test case - Run Time">
+		<classes>
+			<class name="com.webMethods.io.Integration.RunTimeTests.RunTimeTests"/>
+		</classes>
+	</test>
+	
+	<test name="Preview - All Recipes">
+		<classes>
+			<class name="com.webMethods.io.Integration.AllRecipesPreviewTests.AllRecipesPreview"/>
+		</classes>
+	</test>
+	
+	<test name="Preview - My Recipes">
+		<classes>
+			<class name="com.webMethods.io.Integration.MyRecipesPreviewTests.MyRecipesPreview"/>
+		</classes>
+	</test>
+	
+	<test name="Node JS Account Usages">
+		<classes>
+			<class name="com.webMethods.io.Integration.NodeJSUsagesTests.NodeJSAccountUsages"/>
+		</classes>
+	</test>
+	<!--ALTAMASH SHAIKH MESSAGING BACK LOG TEST CASES  -->
+	
+	
+	<!-- HARSHAD'S 10.16 TEST CASES -->
+	<test name="Project Parameters : Publish and Deploy Projects">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectParamsPublishDeployTests.ProjectParamsPublishDeploy"/>
+		</classes>
+	</test>
+	
+	<test name="Custom Role Workflow Delete test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.DeleteWorkflowWithRoleTests.DeleteWorkflowWithCustomRole"/>
+		</classes>
+	</test>
+	
+	<test name="Transaction Count test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.TransactionsCountTests.TransactionCount"/>
+		</classes>
+	</test>
+	<!-- HARSHAD'S 10.16 TEST CASES -->		
+	
+	<test name="WorkflowMessage test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.WFMessagingsTests.WorkflowMessagingTestcases"/>
+		</classes>
+	</test>
+	
+	<test name="Empty null values test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.EmptyNullValuesTests.EmptyNullValues"/>
+		</classes>
+	</test>
+	
+	<test name="Messaging error handling test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ErrorHandlingMessagingTests.ErrorHandlingforMessaging"/>
+		</classes>
+	</test>
+	
+	<test name="External JMS CCUM test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ExternalJMSCUMTests.ExternalJMSCCUMTestCases"/>
+		</classes>
+	</test>
+	
+	<test name="External JMS test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ExternalJMSTests.ExternalJMSUMTestCases"/>
+		</classes>
+	</test>
+	
+	<test name="Flowservices messaging test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.FlowServicesMessagingTests.FlowserviceMessaging"/>
+		</classes>
+	</test>
+	
+	<test name="Project params clone publish and deploy test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ProjectParamsActionTests.ProjectParamaterClonePublishDeploy"/>
+		</classes>
+	</test>
+	
+	<test name="Context ID test case">
+		<classes>
+			<class name="com.webMethods.io.Integration.ContextIDTests.ContextID"/>
+		</classes>
+	</test>
+	
+</suite>
